@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from './counter';
+import Logo from './logo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import React, { Component } from 'react'
+
+class App extends Component {
+  state={
+    total :0
+    
+  }
+  sumTotal =(countValue)=>{
+    this.setState((prevState)=>{
+    if(prevState.total>= 0) return {total : prevState.total +countValue} ;
+    })
+  }
+  render() {
+    return (
+      <div>
+        < Logo />
+        <Counter getTotal ={this.sumTotal}  />
+        <Counter getTotal ={this.sumTotal}  />
+        <Counter getTotal ={this.sumTotal}  />
+        <Counter getTotal ={this.sumTotal}  />
+        
+
+
+        <div className='totalValues'>
+          {this.state.total}
+        </div>
+        
+      </div>
+    )
+  }
 }
+
+
 
 export default App;
