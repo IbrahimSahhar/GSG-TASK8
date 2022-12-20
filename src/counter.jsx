@@ -7,21 +7,21 @@ export default class Counter extends Component {
 
   increment = () => {
     this.setState((prev) => ({
-      count: prev.count + 1,
+      count: prev.count + +this.props.numberOfCount,
     }));
     if (this.state.count >= 0) {
-      this.props.getTotal(1);
+      this.props.getTotal(+this.props.numberOfCount);
     }
   };
 
   decrement = () => {
     this.setState((prevState) => {
       if (prevState.count > 0) {
-        return { count: prevState.count - 1 };
+        return { count: prevState.count - +this.props.numberOfCount };
       }
     });
     if (this.state.count > 0) {
-      this.props.getTotal(-1);
+      this.props.getTotal(-+this.props.numberOfCount);
     }
   };
 

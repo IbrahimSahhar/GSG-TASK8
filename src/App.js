@@ -20,10 +20,10 @@ class App extends Component {
     return (
       <div>
         < Logo />
-        <Counter getTotal ={this.sumTotal}  />
-        <Counter getTotal ={this.sumTotal}  />
-        <Counter getTotal ={this.sumTotal}  />
-        <Counter getTotal ={this.sumTotal}  />
+        <Counter getTotal ={this.sumTotal} numberOfCount ='1'  />
+        <Counter getTotal ={this.sumTotal}  numberOfCount ='2'/>
+        <Counter getTotal ={this.sumTotal}  numberOfCount ='3'/>
+        <Counter getTotal ={this.sumTotal}  numberOfCount ='4'/>
         
 
 
