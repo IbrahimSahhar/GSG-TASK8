@@ -19,7 +19,7 @@ code {
 .counter{
   margin: 50px auto;
   max-width: 400px;
-  height: 65px;
+  height: 45px;
   display: flex;
   justify-content: space-evenly;
 }
